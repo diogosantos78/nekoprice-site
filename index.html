@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NekoPrice | Anime Figure Price Comparison</title>
+    <meta
+      name="description"
+      content="English anime figure price comparison platform focused on exact figure matching, trusted providers, shipping transparency, and collector-safe data."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#home" aria-label="NekoPrice home">
+        <span class="brand-mark" aria-hidden="true">N</span>
+        <span>NekoPrice</span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#home">Search</a>
+        <a href="#figure">Figure</a>
+        <a href="#providers">Providers</a>
+        <a href="#data">Data System</a>
+      </nav>
+      <button class="icon-button" id="wishlistButton" type="button" title="Wishlist" aria-label="Open wishlist">
+        <span aria-hidden="true">Wish</span>
+        <span class="count-pill" id="wishlistCount">0</span>
+      </button>
+    </header>
+
+    <main>
+      <section id="home" class="app-band search-band">
+        <div class="band-inner search-layout">
+          <div class="search-panel">
+            <p class="eyebrow">Exact anime figure comparison</p>
+            <h1>Find the right figure at the best verified total.</h1>
+            <form class="search-box" id="searchForm" role="search">
+              <label class="sr-only" for="searchInput">Search anime figures</label>
+              <input
+                id="searchInput"
+                type="search"
+                value="Rem"
+                placeholder="Rem, Re:ZERO, Nendoroid, Good Smile Company, AmiAmi..."
+                autocomplete="off"
+              />
+              <button type="submit">Search</button>
+            </form>
+            <div class="quick-filters" aria-label="Quick searches">
+              <button type="button" data-query="Rem">Rem</button>
+              <button type="button" data-query="Re:ZERO">Re:ZERO</button>
+              <button type="button" data-query="Nendoroid">Nendoroid</button>
+              <button type="button" data-query="Good Smile Company">Good Smile</button>
+              <button type="button" data-query="HyperToys">HyperToys</button>
+            </div>
+          </div>
+
+          <aside class="featured-product" aria-label="Featured exact figure">
+            <img
+              src="https://imgs1.goodsmileus.com/image/cache/data/productimages/POP/Rem_LSize/01_2410221501429729-1200x1200.jpg"
+              alt="POP UP PARADE Rem L Size"
+            />
+            <div>
+              <span class="badge mint">Exact variation</span>
+              <h2>POP UP PARADE Rem L Size</h2>
+              <p>Good Smile Company, non-scale, Rem, Re:ZERO. Separate from Nendoroid, bunny, wedding, and prize figures.</p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="app-band results-band" aria-labelledby="resultsTitle">
+        <div class="band-inner">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Clean catalog</p>
+              <h2 id="resultsTitle">Search Results</h2>
+            </div>
+            <p id="resultMeta" class="muted">Loading figures...</p>
+          </div>
+
+          <div class="workspace-grid">
+            <aside class="filter-panel" aria-label="Filters">
+              <div class="filter-group">
+                <label for="manufacturerFilter">Manufacturer</label>
+                <select id="manufacturerFilter">
+                  <option value="all">All manufacturers</option>
+                </select>
+              </div>
+              <div class="filter-group">
+                <label for="typeFilter">Scale or type</label>
+                <select id="typeFilter">
+                  <option value="all">All types</option>
+                </select>
+              </div>
+              <div class="filter-group">
+                <label for="statusFilter">Availability</label>
+                <select id="statusFilter">
+                  <option value="all">Any availability</option>
+                  <option value="In stock">In stock</option>
+                  <option value="Pre-order">Pre-order</option>
+                  <option value="Released">Released</option>
+                  <option value="Sold out">Sold out</option>
+                  <option value="Archive">Archive</option>
+                </select>
+              </div>
+              <div class="filter-group">
+                <label for="providerFilter">Provider</label>
+                <select id="providerFilter">
+                  <option value="all">All providers</option>
+                </select>
+              </div>
+              <div class="filter-group">
+                <label for="sortFilter">Sort by</label>
+                <select id="sortFilter">
+                  <option value="lowestTotal">Lowest total first</option>
+                  <option value="newest">Newest release first</option>
+                  <option value="availability">Availability first</option>
+                </select>
+              </div>
+              <div class="filter-group">
+                <label for="priceRange">Maximum verified total</label>
+                <input id="priceRange" type="range" min="20" max="350" value="350" />
+                <span id="priceRangeValue">Up to EUR 350</span>
+              </div>
+              <div class="filter-group compact-checks">
+                <label>
+                  <input id="confirmedOnly" type="checkbox" />
+                  Confirmed listings only
+                </label>
+                <label>
+                  <input id="shipsToPortugal" type="checkbox" />
+                  Ships to Portugal
+                </label>
+              </div>
+            </aside>
+
+            <div>
+              <div class="result-note">
+                <strong>Matching rule:</strong>
+                Search results show separate figure variations. Provider listings are attached only when character, title, manufacturer, scale or type, version, image, URL, price, availability, and provider checks pass.
+              </div>
+              <div class="product-grid" id="productGrid"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="figure" class="app-band product-band" aria-labelledby="productTitle">
+        <div class="band-inner product-layout">
+          <article class="product-summary">
+            <div class="product-image-frame" id="productImageFrame">
+              <img
+                id="productImage"
+                src="https://imgs1.goodsmileus.com/image/cache/data/productimages/POP/Rem_LSize/01_2410221501429729-1200x1200.jpg"
+                alt="Selected figure image"
+              />
+              <div class="figure-placeholder product-image-fallback" aria-hidden="true"></div>
+            </div>
+            <div class="product-copy">
+              <p class="eyebrow">Figure page</p>
+              <h2 id="productTitle">POP UP PARADE Rem L Size</h2>
+              <p id="productDescription">
+                Exact figure record with provider listings grouped by verified product identity.
+              </p>
+              <dl class="spec-grid" id="specGrid"></dl>
+              <div class="product-actions">
+                <button id="trackProduct" type="button">Add to wishlist</button>
+                <button id="alertProduct" type="button" class="secondary-button">Create price alert</button>
+              </div>
+            </div>
+          </article>
+
+          <aside class="deal-panel" aria-label="Best verified total">
+            <span class="badge yellow">Best verified total</span>
+            <strong id="bestDealTotal">Total unavailable</strong>
+            <p id="bestDealStore">Waiting for a listing with confirmed price and shipping.</p>
+            <a id="bestDealLink" href="#" target="_blank" rel="noreferrer" aria-disabled="true">Open provider</a>
+            <small id="bestDealNote">Unknown totals stay unknown until price, shipping, and fees are available.</small>
+          </aside>
+        </div>
+
+        <div class="band-inner comparison-area">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Price comparison</p>
+              <h2>Provider listings for this exact figure</h2>
+            </div>
+            <button id="sortToggle" type="button" class="secondary-button">Lowest total first</button>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Provider</th>
+                  <th>Stock</th>
+                  <th>Product price</th>
+                  <th>Shipping</th>
+                  <th>Tax or fees</th>
+                  <th>Estimated total</th>
+                  <th>Confidence</th>
+                  <th>Last updated</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody id="offerTable"></tbody>
+            </table>
+          </div>
+
+          <div class="insight-grid">
+            <section class="chart-panel" aria-labelledby="chartTitle">
+              <div class="section-heading tight">
+                <div>
+                  <p class="eyebrow">Price history</p>
+                  <h3 id="chartTitle">Verified total over time</h3>
+                </div>
+                <span id="chartDelta" class="badge mint">Pending</span>
+              </div>
+              <canvas id="priceChart" width="760" height="280" aria-label="Price history chart"></canvas>
+              <p id="chartCaption" class="muted chart-caption">Price history appears after at least two verified total updates.</p>
+            </section>
+
+            <section class="normalization-panel" aria-labelledby="normalizationTitle">
+              <p class="eyebrow">Matching and validation</p>
+              <h3 id="normalizationTitle">Exact-product rules</h3>
+              <ul id="normalizationList"></ul>
+              <div class="validation-box">
+                <h4>Current listing checks</h4>
+                <ul id="validationList"></ul>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <section id="providers" class="app-band supplier-band" aria-labelledby="supplierTitle">
+        <div class="band-inner">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Trusted providers</p>
+              <h2 id="supplierTitle">Recognized figure shops</h2>
+            </div>
+            <p class="muted">Official stores, known retailers, affiliate feeds, and permitted crawlers only.</p>
+          </div>
+          <div class="supplier-grid" id="supplierGrid"></div>
+        </div>
+      </section>
+
+      <section id="data" class="app-band data-band" aria-labelledby="dataTitle">
+        <div class="band-inner">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Data system</p>
+              <h2 id="dataTitle">Production-ready architecture</h2>
+            </div>
+          </div>
+          <div class="pipeline">
+            <article>
+              <span>1</span>
+              <h3>Ingest</h3>
+              <p>Use official APIs, affiliate feeds, partner exports, and permission-aware crawlers. Respect robots.txt, rate limits, and terms.</p>
+            </article>
+            <article>
+              <span>2</span>
+              <h3>Normalize</h3>
+              <p>Match by JAN/EAN, character, series, manufacturer, scale, version, title tokens, image fingerprint, and provider URL.</p>
+            </article>
+            <article>
+              <span>3</span>
+              <h3>Validate</h3>
+              <p>Reject duplicates and suspicious matches. Low-confidence rows go to an admin verification queue instead of being confirmed.</p>
+            </article>
+            <article>
+              <span>4</span>
+              <h3>Total price</h3>
+              <p>Show product price, currency, shipping, fees, and total only when each part is known. Unknown values stay visibly unavailable.</p>
+            </article>
+          </div>
+
+          <div class="admin-panel" aria-labelledby="adminTitle">
+            <div>
+              <p class="eyebrow">Admin verification panel</p>
+              <h3 id="adminTitle">Listings that need human review</h3>
+            </div>
+            <div id="validationQueue" class="queue-grid"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <dialog id="wishlistDialog" class="modal">
+      <form method="dialog">
+        <div class="modal-header">
+          <h2>Wishlist</h2>
+          <button class="icon-button" value="close" aria-label="Close" title="Close">&times;</button>
+        </div>
+        <div id="wishlistItems" class="modal-list"></div>
+      </form>
+    </dialog>
+
+    <dialog id="alertDialog" class="modal">
+      <form method="dialog" id="alertForm">
+        <div class="modal-header">
+          <h2>Create price alert</h2>
+          <button class="icon-button" value="close" aria-label="Close" title="Close">&times;</button>
+        </div>
+        <label class="filter-group">
+          Email
+          <input id="alertEmail" type="email" placeholder="collector@example.com" />
+        </label>
+        <label class="filter-group">
+          Notify below
+          <input id="alertPrice" type="number" min="1" step="0.01" value="40" />
+        </label>
+        <button type="submit">Save alert</button>
+        <p id="alertStatus" class="muted"></p>
+      </form>
+    </dialog>
+
+    <footer class="footer">
+      <p>Collector safety note: always confirm stock, shipping, duties, and final checkout total on the provider site before buying.</p>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
