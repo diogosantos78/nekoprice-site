@@ -6,7 +6,7 @@
     <title>NekoPrice | Anime Figure Price Comparison</title>
     <meta
       name="description"
-      content="English anime figure price comparison platform focused on exact figure matching, trusted providers, shipping transparency, and collector-safe data."
+      content="Compare anime figure prices across trusted stores with shipping, taxes, and exact-version matching."
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
@@ -18,9 +18,9 @@
       </a>
       <nav class="nav" aria-label="Primary navigation">
         <a href="#home">Search</a>
-        <a href="#figure">Figure</a>
-        <a href="#providers">Providers</a>
-        <a href="#data">Data System</a>
+        <a href="#results">Results</a>
+        <a href="#figure">Best Price</a>
+        <a href="#providers">Stores</a>
       </nav>
       <button class="icon-button" id="wishlistButton" type="button" title="Wishlist" aria-label="Open wishlist">
         <span aria-hidden="true">Wish</span>
@@ -32,112 +32,149 @@
       <section id="home" class="app-band search-band">
         <div class="band-inner search-layout">
           <div class="search-panel">
-            <p class="eyebrow">Exact anime figure comparison</p>
-            <h1>Find the right figure at the best verified total.</h1>
+            <p class="eyebrow">Anime figure price comparison</p>
+            <h1>Compare anime figure prices with shipping and taxes included.</h1>
+            <p class="hero-subheadline">
+              Find the cheapest trusted store for the exact figure you want &mdash; no mixed versions, no hidden totals.
+            </p>
             <form class="search-box" id="searchForm" role="search">
               <label class="sr-only" for="searchInput">Search anime figures</label>
               <input
                 id="searchInput"
                 type="search"
                 value="Rem"
-                placeholder="Rem, Re:ZERO, Nendoroid, Good Smile Company, AmiAmi..."
+                placeholder="Rem, Hatsune Miku, Nendoroid 663, Good Smile..."
                 autocomplete="off"
               />
-              <button type="submit">Search</button>
+              <button type="submit">Compare prices</button>
             </form>
             <div class="quick-filters" aria-label="Quick searches">
               <button type="button" data-query="Rem">Rem</button>
-              <button type="button" data-query="Re:ZERO">Re:ZERO</button>
               <button type="button" data-query="Nendoroid">Nendoroid</button>
               <button type="button" data-query="Good Smile Company">Good Smile</button>
-              <button type="button" data-query="HyperToys">HyperToys</button>
+            </div>
+            <div class="trust-strip" aria-label="NekoPrice trust signals">
+              <span>Verified stores</span>
+              <span>Exact figure only</span>
+              <span>Totals shown clearly</span>
             </div>
           </div>
 
-          <aside class="featured-product" aria-label="Featured exact figure">
+          <aside class="featured-product hero-example" aria-label="Example price comparison for POP UP PARADE Rem L Size">
+            <div class="example-badges">
+              <span class="badge yellow">Example data</span>
+              <span class="badge mint">Exact match</span>
+            </div>
             <img
               src="https://imgs1.goodsmileus.com/image/cache/data/productimages/POP/Rem_LSize/01_2410221501429729-1200x1200.jpg"
               alt="POP UP PARADE Rem L Size"
             />
             <div>
-              <span class="badge mint">Exact variation</span>
               <h2>POP UP PARADE Rem L Size</h2>
-              <p>Good Smile Company, non-scale, Rem, Re:ZERO. Separate from Nendoroid, bunny, wedding, and prize figures.</p>
+              <p>Same figure only: no Nendoroid, bunny, wedding, or prize listings mixed in.</p>
+              <article class="hero-preview" aria-label="Example store totals">
+                <div class="hero-preview-head">
+                  <strong>Best total today</strong>
+                  <span>AmiAmi wins</span>
+                </div>
+                <dl>
+                  <div class="comparison-winner">
+                    <dt>AmiAmi</dt>
+                    <dd>&euro;42.56</dd>
+                  </div>
+                  <div>
+                    <dt>Solaris Japan</dt>
+                    <dd>&euro;48.13</dd>
+                  </div>
+                  <div>
+                    <dt>Hobby Genki</dt>
+                    <dd>&euro;52.80</dd>
+                  </div>
+                </dl>
+                <p class="example-note">Product price + shipping + estimated taxes when available.</p>
+              </article>
             </div>
           </aside>
         </div>
       </section>
 
-      <section class="app-band results-band" aria-labelledby="resultsTitle">
+      <section id="results" class="app-band results-band" aria-labelledby="resultsTitle">
         <div class="band-inner">
           <div class="section-heading">
             <div>
-              <p class="eyebrow">Clean catalog</p>
-              <h2 id="resultsTitle">Search Results</h2>
+              <p class="eyebrow">Exact matches</p>
+              <h2 id="resultsTitle">Compare the right figure</h2>
             </div>
-            <p id="resultMeta" class="muted">Loading figures...</p>
+            <p id="resultMeta" class="muted" aria-live="polite">Loading figures...</p>
           </div>
+          <p id="resultQuery" class="result-query" aria-live="polite">Showing results for &ldquo;Rem&rdquo;.</p>
 
           <div class="workspace-grid">
-            <aside class="filter-panel" aria-label="Filters">
-              <div class="filter-group">
-                <label for="manufacturerFilter">Manufacturer</label>
-                <select id="manufacturerFilter">
-                  <option value="all">All manufacturers</option>
-                </select>
-              </div>
-              <div class="filter-group">
-                <label for="typeFilter">Scale or type</label>
-                <select id="typeFilter">
-                  <option value="all">All types</option>
-                </select>
-              </div>
-              <div class="filter-group">
-                <label for="statusFilter">Availability</label>
-                <select id="statusFilter">
-                  <option value="all">Any availability</option>
-                  <option value="In stock">In stock</option>
-                  <option value="Pre-order">Pre-order</option>
-                  <option value="Released">Released</option>
-                  <option value="Sold out">Sold out</option>
-                  <option value="Archive">Archive</option>
-                </select>
-              </div>
-              <div class="filter-group">
-                <label for="providerFilter">Provider</label>
-                <select id="providerFilter">
-                  <option value="all">All providers</option>
-                </select>
-              </div>
-              <div class="filter-group">
-                <label for="sortFilter">Sort by</label>
-                <select id="sortFilter">
-                  <option value="lowestTotal">Lowest total first</option>
-                  <option value="newest">Newest release first</option>
-                  <option value="availability">Availability first</option>
-                </select>
-              </div>
-              <div class="filter-group">
-                <label for="priceRange">Maximum verified total</label>
-                <input id="priceRange" type="range" min="20" max="350" value="350" />
-                <span id="priceRangeValue">Up to EUR 350</span>
-              </div>
-              <div class="filter-group compact-checks">
-                <label>
-                  <input id="confirmedOnly" type="checkbox" />
-                  Confirmed listings only
-                </label>
-                <label>
-                  <input id="shipsToPortugal" type="checkbox" />
-                  Ships to Portugal
-                </label>
-              </div>
-            </aside>
+            <details class="filter-shell">
+              <summary>
+                <span>Filters</span>
+                <small>Manufacturer, type, store, availability</small>
+              </summary>
+              <aside class="filter-panel" aria-label="Filters">
+                <div class="filter-group">
+                  <label for="manufacturerFilter">Manufacturer</label>
+                  <select id="manufacturerFilter">
+                    <option value="all">All manufacturers</option>
+                  </select>
+                </div>
+                <div class="filter-group">
+                  <label for="typeFilter">Scale or type</label>
+                  <select id="typeFilter">
+                    <option value="all">All types</option>
+                  </select>
+                </div>
+                <div class="filter-group">
+                  <label for="statusFilter">Availability</label>
+                  <select id="statusFilter">
+                    <option value="all">Any availability</option>
+                    <option value="In stock">In stock</option>
+                    <option value="Pre-order">Pre-order</option>
+                    <option value="Released">Released</option>
+                    <option value="Sold out">Sold out</option>
+                    <option value="Archive">Archive</option>
+                  </select>
+                </div>
+                <div class="filter-group">
+                  <label for="providerFilter">Store</label>
+                  <select id="providerFilter">
+                    <option value="all">All stores</option>
+                  </select>
+                </div>
+                <div class="filter-group">
+                  <label for="sortFilter">Sort by</label>
+                  <select id="sortFilter">
+                    <option value="lowestTotal">Lowest total first</option>
+                    <option value="newest">Newest release first</option>
+                    <option value="availability">Availability first</option>
+                  </select>
+                </div>
+                <div class="filter-group">
+                  <label for="priceRange">Maximum total price</label>
+                  <input id="priceRange" type="range" min="20" max="350" value="350" />
+                  <span id="priceRangeValue">Up to EUR 350</span>
+                </div>
+                <div class="filter-group compact-checks">
+                  <label>
+                    <input id="confirmedOnly" type="checkbox" />
+                    Checked stores only
+                  </label>
+                  <label>
+                    <input id="shipsToPortugal" type="checkbox" />
+                    Ships to Portugal
+                  </label>
+                </div>
+              </aside>
+            </details>
 
             <div>
               <div class="result-note">
-                <strong>Matching rule:</strong>
-                Search results show separate figure variations. Provider listings are attached only when character, title, manufacturer, scale or type, version, image, URL, price, availability, and provider checks pass.
+                <strong>Same figure promise:</strong>
+                NekoPrice keeps versions separate and only shows a total when price, shipping, and fees can be checked.
               </div>
               <div class="product-grid" id="productGrid"></div>
             </div>
@@ -160,21 +197,21 @@
               <p class="eyebrow">Figure page</p>
               <h2 id="productTitle">POP UP PARADE Rem L Size</h2>
               <p id="productDescription">
-                Exact figure record with provider listings grouped by verified product identity.
+                Store totals for this exact figure, with different versions kept separate.
               </p>
               <dl class="spec-grid" id="specGrid"></dl>
               <div class="product-actions">
-                <button id="trackProduct" type="button">Add to wishlist</button>
+                <button id="trackProduct" type="button">Save to wishlist</button>
                 <button id="alertProduct" type="button" class="secondary-button">Create price alert</button>
               </div>
             </div>
           </article>
 
-          <aside class="deal-panel" aria-label="Best verified total">
-            <span class="badge yellow">Best verified total</span>
+          <aside class="deal-panel" aria-label="Cheapest trusted total">
+            <span class="badge yellow">Cheapest trusted total</span>
             <strong id="bestDealTotal">Total unavailable</strong>
             <p id="bestDealStore">Waiting for a listing with confirmed price and shipping.</p>
-            <a id="bestDealLink" href="#" target="_blank" rel="noreferrer" aria-disabled="true">Open provider</a>
+            <a id="bestDealLink" href="#" target="_blank" rel="noreferrer" aria-disabled="true">Go to cheapest store</a>
             <small id="bestDealNote">Unknown totals stay unknown until price, shipping, and fees are available.</small>
           </aside>
         </div>
@@ -183,7 +220,7 @@
           <div class="section-heading">
             <div>
               <p class="eyebrow">Price comparison</p>
-              <h2>Provider listings for this exact figure</h2>
+              <h2>Stores for this figure</h2>
             </div>
             <button id="sortToggle" type="button" class="secondary-button">Lowest total first</button>
           </div>
@@ -191,13 +228,13 @@
             <table>
               <thead>
                 <tr>
-                  <th>Provider</th>
+                  <th>Store</th>
                   <th>Stock</th>
                   <th>Product price</th>
                   <th>Shipping</th>
                   <th>Tax or fees</th>
                   <th>Estimated total</th>
-                  <th>Confidence</th>
+                  <th>Match status</th>
                   <th>Last updated</th>
                   <th></th>
                 </tr>
@@ -206,29 +243,32 @@
             </table>
           </div>
 
-          <div class="insight-grid">
-            <section class="chart-panel" aria-labelledby="chartTitle">
-              <div class="section-heading tight">
-                <div>
-                  <p class="eyebrow">Price history</p>
-                  <h3 id="chartTitle">Verified total over time</h3>
+          <details class="advanced-details">
+            <summary>More price and match details</summary>
+            <div class="insight-grid">
+              <section class="chart-panel" aria-labelledby="chartTitle">
+                <div class="section-heading tight">
+                  <div>
+                    <p class="eyebrow">Price trend</p>
+                    <h3 id="chartTitle">Checked total over time</h3>
+                  </div>
+                  <span id="chartDelta" class="badge mint">Pending</span>
                 </div>
-                <span id="chartDelta" class="badge mint">Pending</span>
-              </div>
-              <canvas id="priceChart" width="760" height="280" aria-label="Price history chart"></canvas>
-              <p id="chartCaption" class="muted chart-caption">Price history appears after at least two verified total updates.</p>
-            </section>
+                <canvas id="priceChart" width="760" height="280" aria-label="Price history chart"></canvas>
+                <p id="chartCaption" class="muted chart-caption">Price history appears after at least two checked total updates.</p>
+              </section>
 
-            <section class="normalization-panel" aria-labelledby="normalizationTitle">
-              <p class="eyebrow">Matching and validation</p>
-              <h3 id="normalizationTitle">Exact-product rules</h3>
-              <ul id="normalizationList"></ul>
-              <div class="validation-box">
-                <h4>Current listing checks</h4>
-                <ul id="validationList"></ul>
-              </div>
-            </section>
-          </div>
+              <section class="normalization-panel" aria-labelledby="normalizationTitle">
+                <p class="eyebrow">Exact figure match</p>
+                <h3 id="normalizationTitle">How versions stay separate</h3>
+                <ul id="normalizationList"></ul>
+                <div class="validation-box">
+                  <h4>Store listing checks</h4>
+                  <ul id="validationList"></ul>
+                </div>
+              </section>
+            </div>
+          </details>
         </div>
       </section>
 
@@ -236,16 +276,16 @@
         <div class="band-inner">
           <div class="section-heading">
             <div>
-              <p class="eyebrow">Trusted providers</p>
-              <h2 id="supplierTitle">Recognized figure shops</h2>
+              <p class="eyebrow">Trusted stores</p>
+              <h2 id="supplierTitle">Stores NekoPrice can compare</h2>
             </div>
-            <p class="muted">Official stores, known retailers, affiliate feeds, and permitted crawlers only.</p>
+            <p class="muted">Known figure retailers with clear product pages and store identity checks.</p>
           </div>
           <div class="supplier-grid" id="supplierGrid"></div>
         </div>
       </section>
 
-      <section id="data" class="app-band data-band" aria-labelledby="dataTitle">
+      <section id="data" class="app-band data-band" aria-labelledby="dataTitle" hidden>
         <div class="band-inner">
           <div class="section-heading">
             <div>

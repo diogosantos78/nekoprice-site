@@ -1,6 +1,7 @@
 const TODAY_LABEL = "2026-04-26 12:00 WEST";
 const REM_POP_IMAGE =
   "https://imgs1.goodsmileus.com/image/cache/data/productimages/POP/Rem_LSize/01_2410221501429729-1200x1200.jpg";
+const FIGURE_PLACEHOLDER_IMAGE = "./assets/figure-placeholder.svg";
 
 const providers = [
   {
@@ -152,7 +153,7 @@ const products = [
     sku: "4983164183580",
     releaseDate: "2026-01-01",
     status: "In stock",
-    image: "https://hyper-toys.com/wp-content/uploads/2026/01/BANPRESTO-ESPRESTO-ReZERO-Rem-Monster-Motions-1.jpg",
+    image: FIGURE_PLACEHOLDER_IMAGE,
     description:
       "Prize figure record kept separate from Rem Nendoroid, scale, bunny, wedding, and POP UP PARADE versions.",
     requiredTokens: ["rem", "espresto", "monster", "motions"],
@@ -171,7 +172,7 @@ const products = [
         providerId: "hypertoys",
         listingTitle: "Banpresto ESPRESTO Re:ZERO Rem Monster Motions",
         url: "https://hyper-toys.com/en/shop/banpresto-espresto-rezero-rem-monster-motions/",
-        image: "https://hyper-toys.com/wp-content/uploads/2026/01/BANPRESTO-ESPRESTO-ReZERO-Rem-Monster-Motions-1.jpg",
+        image: FIGURE_PLACEHOLDER_IMAGE,
         priceAmount: 31.9,
         priceCurrency: "EUR",
         shippingAmount: 3.9,
@@ -264,7 +265,7 @@ const products = [
     sku: "663",
     releaseDate: "2025-09-01",
     status: "Released",
-    image: "https://images.goodsmile.info/cgm/images/product/20251218/58677/425671/large/20c4451bfbec907095da5046f5e3babf.jpg",
+    image: FIGURE_PLACEHOLDER_IMAGE,
     description:
       "Standard Nendoroid Rem rerelease. It must never be mixed with Nendoroid Doll Rem or any scale/prize Rem figure.",
     requiredTokens: ["rem", "nendoroid", "663"],
@@ -280,7 +281,7 @@ const products = [
         providerId: "goodsmile",
         listingTitle: "Nendoroid Rem 663 Rerelease",
         url: "https://www.goodsmile.com/en/product/58677/Nendoroid+Rem",
-        image: "https://images.goodsmile.info/cgm/images/product/20251218/58677/425671/large/20c4451bfbec907095da5046f5e3babf.jpg",
+        image: FIGURE_PLACEHOLDER_IMAGE,
         priceAmount: 6200,
         priceCurrency: "JPY",
         shippingAmount: 15,
@@ -310,7 +311,7 @@ const products = [
     sku: "11113",
     releaseDate: "2023-09-01",
     status: "Released",
-    image: "https://images.goodsmile.info/cgm/images/product/20201002/10139/75086/large/68d02872a09846767010f9e31d2219d4.jpg",
+    image: FIGURE_PLACEHOLDER_IMAGE,
     description:
       "Nendoroid Doll Rem is a separate doll-format figure and should not be merged with the standard Nendoroid Rem 663.",
     requiredTokens: ["rem", "nendoroid", "doll"],
@@ -326,7 +327,7 @@ const products = [
         providerId: "goodsmile",
         listingTitle: "Nendoroid Doll Rem",
         url: "https://www.goodsmile.com/en/product/11113/Nendoroid+Doll+Rem",
-        image: "https://images.goodsmile.info/cgm/images/product/20201002/10139/75086/large/68d02872a09846767010f9e31d2219d4.jpg",
+        image: FIGURE_PLACEHOLDER_IMAGE,
         priceAmount: 8900,
         priceCurrency: "JPY",
         shippingAmount: 15,
@@ -494,8 +495,7 @@ const products = [
     sku: "4570001959349",
     releaseDate: "2024-01-01",
     status: "In stock",
-    image:
-      "https://store.crunchyroll.com/dw/image/v2/BDGC_PRD/on/demandware.static/-/Sites-master-catalog-crunchyroll/default/dw5746ca69/rightstuf/4570001959349_figure-sega-rezero-rem-thunder-god-primary.jpg?sw=1000&sh=1000&sm=fit",
+    image: FIGURE_PLACEHOLDER_IMAGE,
     description:
       "SEGA SPM prize figure with the Thunder God subtitle. Kept separate from every other Rem prize figure.",
     requiredTokens: ["rem", "thunder", "god"],
@@ -511,8 +511,7 @@ const products = [
         providerId: "crunchyroll",
         listingTitle: "Re:ZERO Rem Thunder God Figure",
         url: "https://store.crunchyroll.com/products/rezero--rem-thunder-god-figure-4570001959349.html",
-        image:
-          "https://store.crunchyroll.com/dw/image/v2/BDGC_PRD/on/demandware.static/-/Sites-master-catalog-crunchyroll/default/dw5746ca69/rightstuf/4570001959349_figure-sega-rezero-rem-thunder-god-primary.jpg?sw=1000&sh=1000&sm=fit",
+        image: FIGURE_PLACEHOLDER_IMAGE,
         priceAmount: 22.3,
         priceCurrency: "USD",
         shippingAmount: null,
@@ -682,7 +681,7 @@ const products = [
     sku: "1736",
     releaseDate: "2022-12-01",
     status: "Archive",
-    image: "https://images.goodsmile.info/cgm/images/product/20220621/12791/99419/large/698cbde9d528aa43d5516adf225bca5d.jpg",
+    image: FIGURE_PLACEHOLDER_IMAGE,
     description:
       "Standard Nendoroid Anya Forger. Kept separate from school uniform, casual, and accessory variants.",
     requiredTokens: ["anya", "forger", "nendoroid", "1736"],
@@ -698,7 +697,7 @@ const products = [
         providerId: "goodsmile",
         listingTitle: "Nendoroid Anya Forger 1736",
         url: "https://www.goodsmile.com/en/product/12791/Nendoroid+Anya+Forger",
-        image: "https://images.goodsmile.info/cgm/images/product/20220621/12791/99419/large/698cbde9d528aa43d5516adf225bca5d.jpg",
+        image: FIGURE_PLACEHOLDER_IMAGE,
         priceAmount: 5900,
         priceCurrency: "JPY",
         shippingAmount: null,
@@ -737,9 +736,24 @@ const candidateListings = [
   }
 ];
 
+const WISHLIST_STORAGE_KEY = "nekopriceWishlist";
+const LEGACY_WISHLIST_STORAGE_KEY = "mochipriceWishlist";
+
+function loadWishlist() {
+  const saved = localStorage.getItem(WISHLIST_STORAGE_KEY);
+  const legacySaved = localStorage.getItem(LEGACY_WISHLIST_STORAGE_KEY);
+  const source = saved || legacySaved || "[]";
+
+  if (!saved && legacySaved) {
+    localStorage.setItem(WISHLIST_STORAGE_KEY, legacySaved);
+  }
+
+  return JSON.parse(source);
+}
+
 let selectedProductId = products[0].id;
 let sortAscending = true;
-let wishlist = JSON.parse(localStorage.getItem("mochipriceWishlist") || "[]");
+let wishlist = loadWishlist();
 
 const state = {
   query: "Rem",
@@ -765,8 +779,10 @@ const els = {
   priceRangeValue: document.querySelector("#priceRangeValue"),
   confirmedOnly: document.querySelector("#confirmedOnly"),
   shipsToPortugal: document.querySelector("#shipsToPortugal"),
+  resultsSection: document.querySelector("#results"),
   productGrid: document.querySelector("#productGrid"),
   resultMeta: document.querySelector("#resultMeta"),
+  resultQuery: document.querySelector("#resultQuery"),
   productTitle: document.querySelector("#productTitle"),
   productDescription: document.querySelector("#productDescription"),
   productImageFrame: document.querySelector("#productImageFrame"),
@@ -876,19 +892,19 @@ function validateOffer(product, offer, seenKeys = new Set()) {
   const duplicate = seenKeys.has(offerDuplicateKey(offer));
   const checks = [
     {
-      label: "Provider is trusted",
+      label: "Store is trusted",
       pass: Boolean(provider)
     },
     {
-      label: "URL belongs to provider",
+      label: "Store URL checks out",
       pass: urlMatchesProvider(offer.url, provider)
     },
     {
-      label: "Title matches figure variation",
+      label: "Listing title matches this figure",
       pass: titleMatchesProduct(product, offer)
     },
     {
-      label: "Image is tied to the same listing",
+      label: "Image belongs to the same listing",
       pass: imageLooksRelated(product, offer)
     },
     {
@@ -906,7 +922,7 @@ function validateOffer(product, offer, seenKeys = new Set()) {
   ];
 
   const critical = checks
-    .filter((check) => ["Provider is trusted", "URL belongs to provider", "Title matches figure variation", "Not a duplicate"].includes(check.label))
+    .filter((check) => ["Store is trusted", "Store URL checks out", "Listing title matches this figure", "Not a duplicate"].includes(check.label))
     .every((check) => check.pass);
   const score = checks.filter((check) => check.pass).length / checks.length;
   const confidence = critical && score >= 0.86 ? "Confirmed" : "Needs verification";
@@ -1021,9 +1037,9 @@ function sortProducts(items) {
       return new Date(b.releaseDate) - new Date(a.releaseDate);
     }
     if (state.sort === "availability") {
-      return availabilityRank(a) - availabilityRank(b) || lowestKnownTotal(a) - lowestKnownTotal(b);
+      return availabilityRank(a) - availabilityRank(b) || compareKnownTotals(a, b);
     }
-    return lowestKnownTotal(a) - lowestKnownTotal(b) || new Date(b.releaseDate) - new Date(a.releaseDate);
+    return compareKnownTotals(a, b) || new Date(b.releaseDate) - new Date(a.releaseDate);
   });
 }
 
@@ -1031,6 +1047,10 @@ function variationSignature(product) {
   return [product.character, product.line, product.scale, product.version, product.manufacturer]
     .filter(Boolean)
     .join(" / ");
+}
+
+function buyerFacingDescription(product) {
+  return `${product.title} by ${product.manufacturer}. NekoPrice compares stores for this exact version and keeps similar figures separate.`;
 }
 
 function statusBadgeClass(status) {
@@ -1042,6 +1062,26 @@ function statusBadgeClass(status) {
 
 function confidenceBadgeClass(confidence) {
   return confidence === "Confirmed" ? "mint" : "yellow";
+}
+
+function confidenceLabel(confidence) {
+  return confidence === "Confirmed" ? "Checked match" : "Needs review";
+}
+
+function compareKnownTotals(a, b) {
+  const totalA = lowestKnownTotal(a);
+  const totalB = lowestKnownTotal(b);
+  if (totalA === totalB) return 0;
+  return totalA - totalB;
+}
+
+function visibleQueryLabel() {
+  const query = state.query.trim();
+  return query ? `Showing exact matches for \u201c${query}\u201d.` : "Showing all figures.";
+}
+
+function scrollToResults() {
+  els.resultsSection.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
 function populateSelect(select, values, label) {
@@ -1066,7 +1106,7 @@ function populateFilters() {
   populateSelect(
     els.providerFilter,
     providers.map((provider) => provider.name).sort().map((name) => providers.find((provider) => provider.name === name).id),
-    "All providers"
+    "All stores"
   );
   [...els.providerFilter.options].forEach((option) => {
     if (option.value !== "all") option.textContent = providerName(option.value);
@@ -1079,7 +1119,8 @@ function renderProductCards() {
     (count, product) => count + displayedOffers(product).filter((offer) => offer.confidence === "Confirmed").length,
     0
   );
-  els.resultMeta.textContent = `${matches.length} figure${matches.length === 1 ? "" : "s"} found, ${confirmedOfferCount} confirmed listing${confirmedOfferCount === 1 ? "" : "s"}`;
+  els.resultQuery.textContent = visibleQueryLabel();
+  els.resultMeta.textContent = `${matches.length} figure${matches.length === 1 ? "" : "s"}, ${confirmedOfferCount} checked store listing${confirmedOfferCount === 1 ? "" : "s"}`;
 
   if (!matches.some((product) => product.id === selectedProductId) && matches[0]) {
     selectedProductId = matches[0].id;
@@ -1094,28 +1135,45 @@ function renderProductCards() {
       const image = product.image
         ? `<img src="${product.image}" alt="${product.title}" loading="lazy">`
         : `<div class="figure-placeholder" aria-hidden="true"></div>`;
-      const total = best ? formatMoney(offerTotal(best), best.priceCurrency) : "Total unavailable";
-      const totalLabel = best ? `Best at ${providerName(best.providerId)}` : "No complete total yet";
+      const total = best ? formatMoney(offerTotal(best), best.priceCurrency) : "Unavailable";
+      const bestStore = best ? providerName(best.providerId) : "Unavailable";
 
       return `
         <article class="product-card" aria-current="${product.id === selectedProductId}">
-          <button class="product-thumb" type="button" data-select="${product.id}" title="Open exact figure">
+          <button class="product-thumb" type="button" data-select="${product.id}" title="Compare stores for this figure">
             ${image}
           </button>
           <div>
             <h3>${product.title}</h3>
             <p class="variation-line">${variationSignature(product)}</p>
-            <div class="card-meta">
-              <span class="badge blue">${product.manufacturer}</span>
-              <span class="badge ${statusBadgeClass(product.status)}">${product.status}</span>
-              <span class="badge gray">${confirmed} confirmed</span>
-            </div>
+            <dl class="card-details">
+              <div>
+                <dt>Series</dt>
+                <dd>${product.series}</dd>
+              </div>
+              <div>
+                <dt>Type</dt>
+                <dd>${product.type}</dd>
+              </div>
+              <div>
+                <dt>Manufacturer</dt>
+                <dd>${product.manufacturer}</dd>
+              </div>
+              <div>
+                <dt>Availability</dt>
+                <dd><span class="badge ${statusBadgeClass(product.status)}">${product.status}</span></dd>
+              </div>
+            </dl>
             <div class="price-line">
-              <span class="muted">${totalLabel}</span>
+              <span class="muted">Best total</span>
               <strong>${total}</strong>
             </div>
+            <p class="store-line"><span>Best store</span><strong>${bestStore}</strong></p>
+            <div class="card-meta">
+              <span class="badge gray">${confirmed} checked listing${confirmed === 1 ? "" : "s"}</span>
+            </div>
             <div class="card-actions">
-              <button type="button" data-select="${product.id}">Compare</button>
+              <button type="button" data-select="${product.id}">Compare stores</button>
               <button type="button" class="secondary-button" data-wish="${product.id}">
                 ${isSaved ? "Saved" : "Save"}
               </button>
@@ -1128,11 +1186,12 @@ function renderProductCards() {
 
   if (!matches.length) {
     els.productGrid.innerHTML = `
-      <article class="product-card empty-card">
+      <article class="product-card empty-card empty-state" role="status">
         <div class="product-thumb"><div class="figure-placeholder" aria-hidden="true"></div></div>
         <div>
           <h3>No exact figures found</h3>
-          <p class="muted">Try a character, series, manufacturer, figure type, provider, or JAN/SKU. The app will not show unrelated variations just to fill results.</p>
+          <p class="muted">Try a character, series, manufacturer, figure line, or JAN/SKU. Shorter searches usually work best.</p>
+          <button type="button" class="secondary-button" data-query="Rem">Reset to Rem</button>
         </div>
       </article>
     `;
@@ -1154,11 +1213,11 @@ function renderProductDetail() {
   const best = bestOffer(product);
 
   els.productTitle.textContent = product.title;
-  els.productDescription.textContent = product.description;
+  els.productDescription.textContent = buyerFacingDescription(product);
   els.productImageFrame.classList.remove("is-missing");
   els.productImage.src = product.image || REM_POP_IMAGE;
   els.productImage.alt = product.title;
-  els.trackProduct.textContent = wishlist.includes(product.id) ? "Saved" : "Add to wishlist";
+  els.trackProduct.textContent = wishlist.includes(product.id) ? "Saved" : "Save to wishlist";
   els.alertPrice.value = Number.isFinite(lowestKnownTotal(product)) ? Math.max(1, Math.ceil(lowestKnownTotal(product) - 1)) : 40;
 
   els.specGrid.innerHTML = [
@@ -1183,16 +1242,16 @@ function renderProductDetail() {
 
   if (best) {
     els.bestDealTotal.textContent = formatMoney(offerTotal(best), best.priceCurrency);
-    els.bestDealStore.textContent = `${providerName(best.providerId)} / ${best.availability} / ${best.feesLabel}`;
+    els.bestDealStore.textContent = `Cheapest checked store: ${providerName(best.providerId)}. ${best.availability}. ${best.feesLabel}.`;
     els.bestDealLink.href = best.url;
     els.bestDealLink.removeAttribute("aria-disabled");
-    els.bestDealNote.textContent = `Last updated ${best.lastUpdated}.`;
+    els.bestDealNote.textContent = `Last updated ${best.lastUpdated}. Product, shipping, and fees are included in this total.`;
   } else {
     els.bestDealTotal.textContent = "Total unavailable";
-    els.bestDealStore.textContent = "No listing has confirmed price, same-currency shipping, fees, and destination support yet.";
+    els.bestDealStore.textContent = "No checked store has a complete product, shipping, and fee total yet.";
     els.bestDealLink.href = "#";
     els.bestDealLink.setAttribute("aria-disabled", "true");
-    els.bestDealNote.textContent = "Unknown values are shown as unavailable instead of being guessed.";
+    els.bestDealNote.textContent = "NekoPrice leaves totals unavailable instead of guessing.";
   }
 
   els.offerTable.innerHTML = offers.length
@@ -1200,7 +1259,7 @@ function renderProductDetail() {
         .map((offer) => {
           const total = offerTotal(offer);
           const isBest = best && offer.url === best.url;
-          const bestBadge = isBest ? `<span class="badge yellow">Best Price</span>` : "";
+          const bestBadge = isBest ? `<span class="badge yellow">Best total</span>` : "";
           const shipBadge =
             offer.shipsToPortugal === true
               ? `<span class="badge mint">Ships to PT</span>`
@@ -1209,7 +1268,7 @@ function renderProductDetail() {
                 : `<span class="badge gray">Shipping unconfirmed</span>`;
 
           return `
-            <tr>
+            <tr class="${isBest ? "best-offer-row" : ""}">
               <td>
                 <div class="store-cell">
                   <strong>${providerName(offer.providerId)} ${bestBadge}</strong>
@@ -1220,13 +1279,16 @@ function renderProductDetail() {
               <td>${formatMoney(offer.priceAmount, offer.priceCurrency, "Price unavailable")}</td>
               <td>${formatOfferPart(offer.shippingAmount, offer.shippingCurrency, "Shipping not available", offer.shippingLabel)}</td>
               <td>${formatOfferPart(offer.feesAmount, offer.feesCurrency, "Fees not available", offer.feesLabel)}</td>
-              <td class="total-cell">${total === null ? "Total unavailable" : formatMoney(total, offer.priceCurrency)}</td>
+              <td class="total-cell ${isBest ? "best-total-cell" : ""}">
+                <strong>${total === null ? "Total unavailable" : formatMoney(total, offer.priceCurrency)}</strong>
+                ${isBest ? `<span class="badge yellow">Lowest complete total</span>` : ""}
+              </td>
               <td>
-                <span class="badge ${confidenceBadgeClass(offer.confidence)}">${offer.confidence}</span>
+                <span class="badge ${confidenceBadgeClass(offer.confidence)}">${confidenceLabel(offer.confidence)}</span>
                 ${shipBadge}
               </td>
               <td>${offer.lastUpdated}</td>
-              <td><a class="offer-link" href="${offer.url}" target="_blank" rel="noreferrer">Open</a></td>
+              <td><a class="offer-link" href="${offer.url}" target="_blank" rel="noreferrer">Visit store</a></td>
             </tr>
           `;
         })
@@ -1234,8 +1296,8 @@ function renderProductDetail() {
     : `
       <tr>
         <td colspan="9">
-          <strong>No provider listings are confirmed for this exact figure yet.</strong>
-          <span class="muted">Potential matches should stay in the admin queue until validated.</span>
+          <strong>No checked store listings for this exact figure yet.</strong>
+          <span class="muted">Possible matches stay hidden until the figure version can be checked.</span>
         </td>
       </tr>
     `;
@@ -1290,9 +1352,9 @@ function drawChart(history) {
   if (!history || history.length < 2) {
     ctx.fillStyle = "#716b78";
     ctx.font = "700 22px Segoe UI, Arial";
-    ctx.fillText("Not enough verified total data yet", padding, height / 2);
+    ctx.fillText("Not enough checked total data yet", padding, height / 2);
     els.chartDelta.textContent = "Pending";
-    els.chartCaption.textContent = "Price history appears after at least two verified total updates.";
+    els.chartCaption.textContent = "Price history appears after at least two checked total updates.";
     return;
   }
 
@@ -1344,7 +1406,7 @@ function drawChart(history) {
 
   const delta = ((values[values.length - 1] - values[0]) / values[0]) * 100;
   els.chartDelta.textContent = `${delta.toFixed(0)}%`;
-  els.chartCaption.textContent = `Verified totals from ${history[0].date} to ${history[history.length - 1].date}.`;
+  els.chartCaption.textContent = `Checked totals from ${history[0].date} to ${history[history.length - 1].date}.`;
 }
 
 function renderSuppliers() {
@@ -1359,12 +1421,8 @@ function renderSuppliers() {
           </div>
           <dl>
             <div data-row>
-              <dt>Country</dt>
+              <dt>Location</dt>
               <dd>${provider.country}</dd>
-            </div>
-            <div data-row>
-              <dt>Data</dt>
-              <dd>${provider.method}</dd>
             </div>
             <div data-row>
               <dt>Refresh</dt>
@@ -1375,7 +1433,10 @@ function renderSuppliers() {
               <dd>${provider.confidence}</dd>
             </div>
           </dl>
-          <span class="badge blue">${provider.shipping}</span>
+          <div class="supplier-badges">
+            <span class="badge mint">Verified store</span>
+            <span class="badge blue">Shipping checked</span>
+          </div>
         </article>
       `
     )
@@ -1442,7 +1503,7 @@ function toggleWishlist(productId) {
   wishlist = wishlist.includes(productId)
     ? wishlist.filter((id) => id !== productId)
     : [...wishlist, productId];
-  localStorage.setItem("mochipriceWishlist", JSON.stringify(wishlist));
+  localStorage.setItem(WISHLIST_STORAGE_KEY, JSON.stringify(wishlist));
   renderWishlist();
   renderProductCards();
 }
@@ -1453,6 +1514,13 @@ function setSelectedProduct(productId) {
   document.querySelector("#figure").scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
+function applySearch(query, shouldScroll = true) {
+  state.query = query.trim();
+  els.searchInput.value = state.query;
+  renderProductCards();
+  if (shouldScroll) scrollToResults();
+}
+
 function bindEvents() {
   els.productImage.addEventListener("error", () => {
     els.productImageFrame.classList.add("is-missing");
@@ -1460,15 +1528,12 @@ function bindEvents() {
 
   els.searchForm.addEventListener("submit", (event) => {
     event.preventDefault();
-    state.query = els.searchInput.value;
-    renderProductCards();
+    applySearch(els.searchInput.value);
   });
 
   document.querySelectorAll("[data-query]").forEach((button) => {
     button.addEventListener("click", () => {
-      els.searchInput.value = button.dataset.query;
-      state.query = button.dataset.query;
-      renderProductCards();
+      applySearch(button.dataset.query);
     });
   });
 
@@ -1516,8 +1581,10 @@ function bindEvents() {
   els.productGrid.addEventListener("click", (event) => {
     const selectButton = event.target.closest("[data-select]");
     const wishButton = event.target.closest("[data-wish]");
+    const queryButton = event.target.closest("[data-query]");
     if (selectButton) setSelectedProduct(selectButton.dataset.select);
     if (wishButton) toggleWishlist(wishButton.dataset.wish);
+    if (queryButton) applySearch(queryButton.dataset.query);
   });
 
   els.sortToggle.addEventListener("click", () => {
@@ -1545,7 +1612,7 @@ function bindEvents() {
   els.alertForm.addEventListener("submit", (event) => {
     event.preventDefault();
     const product = products.find((item) => item.id === selectedProductId);
-    els.alertStatus.textContent = `Alert saved for ${product.title} below ${formatMoney(Number(els.alertPrice.value), "EUR")}.`;
+    els.alertStatus.textContent = `NekoPrice will watch ${product.title} below ${formatMoney(Number(els.alertPrice.value), "EUR")}.`;
   });
 }
 

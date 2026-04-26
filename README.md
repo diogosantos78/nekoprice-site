@@ -1,4 +1,4 @@
-# MochiPrice
+# NekoPrice
 
 Static prototype for an English-language anime figure price comparison platform.
 

@@ -1,0 +1,23 @@
+{
+	"folders": [
+		{
+			"path": "../../Downloads/nanaju_ko"
+		},
+		{
+			"path": "../../hentai-paraphilia/src"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "nekoprice-site"
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			
+
+		]
+	}
+}
