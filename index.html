@@ -8,112 +8,114 @@
       name="description"
       content="Compare anime figure prices across trusted stores with shipping, taxes, and exact-version matching."
     />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./styles.css?v=20260505-promoranking" />
   </head>
   <body>
     <header class="topbar">
-      <a class="brand" href="#home" aria-label="NekoPrice home">
-        <span class="brand-mark" aria-hidden="true">N</span>
-        <span>NekoPrice</span>
+      <a class="brand brand-ami" href="#home" aria-label="NekoPrice home">
+        <span class="brand-word" aria-label="NekoPrice">
+          <span>Neko</span><span>Price</span>
+        </span>
+        <img class="brand-mascot" src="./assets/neko-mascot-transparent.png" alt="" aria-hidden="true" />
       </a>
       <nav class="nav" aria-label="Primary navigation">
-        <a href="#home">Search</a>
-        <a href="#results">Results</a>
-        <a href="#figure">Best Price</a>
-        <a href="#providers">Stores</a>
+        <a href="#promotions">Promo&ccedil;&otilde;es</a>
+        <a href="#results">Figures</a>
+        <a href="#community">Comunidade</a>
+        <a href="#contact">Contactos</a>
       </nav>
-      <button class="icon-button" id="wishlistButton" type="button" title="Wishlist" aria-label="Open wishlist">
-        <span aria-hidden="true">Wish</span>
-        <span class="count-pill" id="wishlistCount">0</span>
-      </button>
+      <div class="topbar-actions">
+        <button class="login-button" id="loginButton" type="button" aria-label="Open login and country settings">
+          <span>Login</span>
+          <small id="userCountryPill">Portugal</small>
+        </button>
+        <button class="icon-button" id="wishlistButton" type="button" title="Wishlist" aria-label="Open wishlist">
+          <span aria-hidden="true">Wish</span>
+          <span class="count-pill" id="wishlistCount">0</span>
+        </button>
+      </div>
     </header>
 
     <main>
-      <section id="home" class="app-band search-band">
-        <div class="band-inner search-layout">
-          <div class="search-panel">
+      <section id="home" class="app-band search-band hero-landing">
+        <div class="hero-pattern" aria-hidden="true"></div>
+        <div class="hero-character-bg" id="heroCharacterBg" aria-hidden="true"></div>
+        <div class="band-inner search-layout hero-shell">
+          <div class="search-panel hero-copy">
             <p class="eyebrow">Anime figure price comparison</p>
-            <h1>Compare anime figure prices with shipping and taxes included.</h1>
+            <h1>Find the best figure price.</h1>
             <p class="hero-subheadline">
-              Find the cheapest trusted store for the exact figure you want &mdash; no mixed versions, no hidden totals.
+              Shipping included. Exact versions only.
             </p>
-            <form class="search-box" id="searchForm" role="search">
+            <form class="search-box hero-search" id="searchForm" role="search">
               <label class="sr-only" for="searchInput">Search anime figures</label>
               <input
                 id="searchInput"
                 type="search"
-                value="Rem"
-                placeholder="Rem, Hatsune Miku, Nendoroid 663, Good Smile..."
+                placeholder="Search a figure..."
                 autocomplete="off"
               />
-              <button type="submit">Compare prices</button>
+              <button type="submit">Start now</button>
             </form>
             <div class="quick-filters" aria-label="Quick searches">
               <button type="button" data-query="Rem">Rem</button>
+              <button type="button" data-query="Frieren">Frieren</button>
               <button type="button" data-query="Nendoroid">Nendoroid</button>
-              <button type="button" data-query="Good Smile Company">Good Smile</button>
             </div>
             <div class="trust-strip" aria-label="NekoPrice trust signals">
-              <span>Verified stores</span>
-              <span>Exact figure only</span>
-              <span>Totals shown clearly</span>
+              <span>Trusted stores</span>
+              <span>Shipping included</span>
+              <span>Exact figure matches</span>
             </div>
           </div>
-
-          <aside class="featured-product hero-example" aria-label="Example price comparison for POP UP PARADE Rem L Size">
-            <div class="example-badges">
-              <span class="badge yellow">Example data</span>
-              <span class="badge mint">Exact match</span>
-            </div>
-            <img
-              src="https://imgs1.goodsmileus.com/image/cache/data/productimages/POP/Rem_LSize/01_2410221501429729-1200x1200.jpg"
-              alt="POP UP PARADE Rem L Size"
-            />
-            <div>
-              <h2>POP UP PARADE Rem L Size</h2>
-              <p>Same figure only: no Nendoroid, bunny, wedding, or prize listings mixed in.</p>
-              <article class="hero-preview" aria-label="Example store totals">
-                <div class="hero-preview-head">
-                  <strong>Best total today</strong>
-                  <span>AmiAmi wins</span>
-                </div>
-                <dl>
-                  <div class="comparison-winner">
-                    <dt>AmiAmi</dt>
-                    <dd>&euro;42.56</dd>
-                  </div>
-                  <div>
-                    <dt>Solaris Japan</dt>
-                    <dd>&euro;48.13</dd>
-                  </div>
-                  <div>
-                    <dt>Hobby Genki</dt>
-                    <dd>&euro;52.80</dd>
-                  </div>
-                </dl>
-                <p class="example-note">Product price + shipping + estimated taxes when available.</p>
-              </article>
-            </div>
-          </aside>
         </div>
       </section>
 
-      <section id="results" class="app-band results-band" aria-labelledby="resultsTitle">
+      <section id="promotions" class="app-band promotions-band" aria-labelledby="promotionsTitle">
         <div class="band-inner">
-          <div class="section-heading">
-            <div>
-              <p class="eyebrow">Exact matches</p>
-              <h2 id="resultsTitle">Compare the right figure</h2>
-            </div>
-            <p id="resultMeta" class="muted" aria-live="polite">Loading figures...</p>
+          <div class="ranking-heading">
+            <h2 id="promotionsTitle">Ranking</h2>
+            <a href="#results">See more</a>
           </div>
-          <p id="resultQuery" class="result-query" aria-live="polite">Showing results for &ldquo;Rem&rdquo;.</p>
+          <div id="promoRanking" class="promo-ranking" aria-label="Best figure promotions"></div>
+        </div>
+      </section>
+
+      <section id="results" class="app-band results-band" aria-labelledby="resultsTitle" hidden>
+        <div class="band-inner">
+          <div class="section-heading discovery-heading">
+            <div>
+              <p class="eyebrow">Figure discovery</p>
+              <h2 id="resultsTitle">Trending anime figures</h2>
+              <p id="resultsSubtitle" class="muted">Browse popular figures and compare trusted store prices.</p>
+            </div>
+            <p id="resultMeta" class="muted result-count" aria-live="polite">Loading figures...</p>
+          </div>
+          <p id="resultQuery" class="result-query" aria-live="polite" hidden></p>
+
+          <div class="category-chips" id="categoryChips" aria-label="Figure categories">
+            <button type="button" data-category="trending" aria-pressed="true">Trending</button>
+            <button type="button" data-category="new">New releases</button>
+            <button type="button" data-category="nendoroids">Nendoroids</button>
+            <button type="button" data-category="scale">Scale figures</button>
+            <button type="button" data-category="prize">Prize figures</button>
+            <button type="button" data-category="preorder">Pre-orders</button>
+          </div>
+
+          <details class="match-details">
+            <summary>How exact matching works</summary>
+            <p>
+              NekoPrice keeps each product identity separate: character, series, line, scale, version, and release
+              are matched before offers are compared. A Nendoroid, bunny version, rerelease, prize figure, or scale
+              figure stays in its own card unless the catalogue explicitly marks it as the same item.
+            </p>
+          </details>
 
           <div class="workspace-grid">
             <details class="filter-shell">
               <summary>
-                <span>Filters</span>
-                <small>Manufacturer, type, store, availability</small>
+                <span>Optional filters</span>
+                <small>Store, type, availability</small>
               </summary>
               <aside class="filter-panel" aria-label="Filters">
                 <div class="filter-group">
@@ -165,24 +167,23 @@
                   </label>
                   <label>
                     <input id="shipsToPortugal" type="checkbox" />
-                    Ships to Portugal
+                    Ships to selected country
                   </label>
                 </div>
               </aside>
             </details>
 
             <div>
-              <div class="result-note">
-                <strong>Same figure promise:</strong>
-                NekoPrice keeps versions separate and only shows a total when price, shipping, and fees can be checked.
-              </div>
               <div class="product-grid" id="productGrid"></div>
+              <div class="show-more-wrap">
+                <button id="showMoreButton" type="button" class="secondary-button" hidden>Show more</button>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="figure" class="app-band product-band" aria-labelledby="productTitle">
+      <section id="figure" class="app-band product-band" aria-labelledby="productTitle" hidden>
         <div class="band-inner product-layout">
           <article class="product-summary">
             <div class="product-image-frame" id="productImageFrame">
@@ -209,10 +210,10 @@
 
           <aside class="deal-panel" aria-label="Cheapest trusted total">
             <span class="badge yellow">Cheapest trusted total</span>
-            <strong id="bestDealTotal">Total unavailable</strong>
-            <p id="bestDealStore">Waiting for a listing with confirmed price and shipping.</p>
-            <a id="bestDealLink" href="#" target="_blank" rel="noreferrer" aria-disabled="true">Go to cheapest store</a>
-            <small id="bestDealNote">Unknown totals stay unknown until price, shipping, and fees are available.</small>
+            <strong id="bestDealTotal">&euro;42.56</strong>
+            <p id="bestDealStore">Best total price: AmiAmi. In stock. New.</p>
+            <a id="bestDealLink" target="_blank" rel="noreferrer" aria-disabled="true">Open offer</a>
+            <small id="bestDealNote">Includes product price, shipping, and taxes.</small>
           </aside>
         </div>
 
@@ -228,15 +229,16 @@
             <table>
               <thead>
                 <tr>
-                  <th>Store</th>
+                  <th>Provider</th>
                   <th>Stock</th>
                   <th>Product price</th>
                   <th>Shipping</th>
                   <th>Tax or fees</th>
                   <th>Estimated total</th>
-                  <th>Match status</th>
+                  <th>Condition</th>
+                  <th>Confidence</th>
                   <th>Last updated</th>
-                  <th></th>
+                  <th>Link</th>
                 </tr>
               </thead>
               <tbody id="offerTable"></tbody>
@@ -244,7 +246,7 @@
           </div>
 
           <details class="advanced-details">
-            <summary>More price and match details</summary>
+            <summary>How exact matching works</summary>
             <div class="insight-grid">
               <section class="chart-panel" aria-labelledby="chartTitle">
                 <div class="section-heading tight">
@@ -252,7 +254,7 @@
                     <p class="eyebrow">Price trend</p>
                     <h3 id="chartTitle">Checked total over time</h3>
                   </div>
-                  <span id="chartDelta" class="badge mint">Pending</span>
+                  <span id="chartDelta" class="badge mint">New</span>
                 </div>
                 <canvas id="priceChart" width="760" height="280" aria-label="Price history chart"></canvas>
                 <p id="chartCaption" class="muted chart-caption">Price history appears after at least two checked total updates.</p>
@@ -272,7 +274,7 @@
         </div>
       </section>
 
-      <section id="providers" class="app-band supplier-band" aria-labelledby="supplierTitle">
+      <section id="providers" class="app-band supplier-band" aria-labelledby="supplierTitle" hidden>
         <div class="band-inner">
           <div class="section-heading">
             <div>
@@ -282,6 +284,36 @@
             <p class="muted">Known figure retailers with clear product pages and store identity checks.</p>
           </div>
           <div class="supplier-grid" id="supplierGrid"></div>
+        </div>
+      </section>
+
+      <section id="community" class="app-band community-band" aria-labelledby="communityTitle" hidden>
+        <div class="band-inner simple-grid">
+          <div>
+            <p class="eyebrow">Comunidade</p>
+            <h2 id="communityTitle">Built for collectors who care about the exact version.</h2>
+            <p class="muted">
+              Follow price drops, compare trusted stores, and keep your wishlist focused on the figures you actually want.
+            </p>
+          </div>
+          <div class="mini-panel">
+            <span class="badge mint">Coming next</span>
+            <strong>Wishlist + alerts</strong>
+            <p>Save a figure and get a clean alert when the checked total drops below your target.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="app-band contact-band" aria-labelledby="contactTitle" hidden>
+        <div class="band-inner simple-grid">
+          <div>
+            <p class="eyebrow">Contactos</p>
+            <h2 id="contactTitle">Want a store or figure added?</h2>
+            <p class="muted">
+              NekoPrice is starting small: exact figure matching, transparent totals, and reliable store data first.
+            </p>
+          </div>
+          <a class="contact-link" href="mailto:hello@nekoprice.com">hello@nekoprice.com</a>
         </div>
       </section>
 
@@ -312,7 +344,7 @@
             <article>
               <span>4</span>
               <h3>Total price</h3>
-              <p>Show product price, currency, shipping, fees, and total only when each part is known. Unknown values stay visibly unavailable.</p>
+              <p>Show product price, currency, shipping, fees, and total together for every provider row.</p>
             </article>
           </div>
 
@@ -326,6 +358,31 @@
         </div>
       </section>
     </main>
+
+    <dialog id="loginDialog" class="modal profile-modal">
+      <form id="loginForm">
+        <div class="modal-header">
+          <h2>Login</h2>
+          <button class="icon-button" id="loginClose" type="button" aria-label="Close" title="Close">&times;</button>
+        </div>
+        <div class="profile-grid">
+          <label class="filter-group">
+            Name
+            <input id="profileName" type="text" autocomplete="name" placeholder="Your name" />
+          </label>
+          <label class="filter-group">
+            Email
+            <input id="profileEmail" type="email" autocomplete="email" placeholder="you@example.com" />
+          </label>
+          <label class="filter-group">
+            Nationality
+            <select id="profileCountry"></select>
+          </label>
+        </div>
+        <button type="submit">Save</button>
+        <p id="profileStatus" class="muted"></p>
+      </form>
+    </dialog>
 
     <dialog id="wishlistDialog" class="modal">
       <form method="dialog">
@@ -356,10 +413,10 @@
       </form>
     </dialog>
 
-    <footer class="footer">
+    <footer class="footer" hidden>
       <p>Collector safety note: always confirm stock, shipping, duties, and final checkout total on the provider site before buying.</p>
     </footer>
 
-    <script src="./app.js"></script>
+    <script src="./app.js?v=20260505-promoranking"></script>
   </body>
 </html>
